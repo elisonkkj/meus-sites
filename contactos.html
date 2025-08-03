@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Elison Emanuel">
+    <meta name="description" content="formulario de contacto de racionais mcs">
+    <meta name="keywords" content="Racionais Mcs, Rap, Hip Hop, Música Brasileira">
+    <link rel="stylesheet" href="albuns.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/42a6c86616.js" crossorigin="anonymous"></script>
+    <title>contactos</title>
+</head>
+
+<body class="body-contactos">
+
+    <h2 class="container-fluid" id="title-contactos">Contactos</h2>
+
+    <form id="meuFormulario" onsubmit="return enviarFormulario()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="Apelido">Apelido:</label>
+        <input type="text" id="Apelido" name="Apelido" required>
+        <label for="Data">Data:</label>
+        <input type="date" id="Data" name="Data" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" maxlength="12" required>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem"></textarea>
+        <input id="btn-enviar" type="submit" value="Enviar">
+        <div class="mensagem-sucesso" style="display: none;">Formulário enviado com sucesso!</div>
+    </form>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row" id="footer">
+                <span>
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <a id="footer-link" href="https://www.instagram.com/racionaiscn/?hl=pt#"
+                        target="_blank">Instagram</a>
+                </span>
+                <span>
+                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    <a id="footer-link" href="https://www.facebook.com/racionaiscn/" target="_blank">Facebook</a>
+                </span>
+                <span>
+                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    <a id="footer-link" href="https://x.com/racionaiscn" target="_blank">Twitter</a>
+                </span>
+                <span>
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    <a id="footer-link" href="https://www.youtube.com/@RacionaisTV/videos" target="_blank">Youtube</a>
+                </span>
+            </div>
+            <div class="container-fluid"><br>
+                <div class="row" id="copyrirght">
+                    <div class="copyrirght">Copyright &copy; 2025 Elison Emanuel. Todos os direitos reservados"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        function enviarFormulario() {
+            var mensagemSucesso = document.querySelector(".mensagem-sucesso");
+            mensagemSucesso.style.display = "block";
+            mensagemSucesso.style.opacity = 1;
+            setTimeout(function () {
+                mensagemSucesso.style.transition = 0;
+                mensagemSucesso.style.display = "none";
+            }, 4000);
+            return true;
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
